@@ -1,0 +1,109 @@
+body{
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.bubble, .face::before, .face::after {
+  position: absolute;
+}
+
+.face::before, .face::after {
+  content: "";
+  display: block;
+}
+
+.bubble, .face::before, .face::after, .face {
+  border-radius: 50%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: #292929;
+  background: radial-gradient(circle at top, rgba(61, 61, 61, 0.99), black);
+}
+
+.face {
+  height: 8em;
+  width: 8em;
+  position: relative;
+  margin: 4em auto;
+  background: #262626;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.face::after {
+  height: 10em;
+  width: 10em;
+  top: -1em;
+  left: -1em;
+  z-index: -1;
+  /* box-shadow: inset 0 -3px 6px rgba(64, 191, 128, 0.1), 0 2px 12px rgba(64, 191, 128, 0.7); */
+  background: linear-gradient(to bottom, #404040, #030303);
+}
+
+.green{
+    box-shadow: inset 0 -3px 6px rgba(64, 191, 128, 0.1), 0 2px 12px rgba(64, 191, 128, 0.7);
+}
+
+.blue{
+    box-shadow: inset 0 -3px 6px rgba(64, 191, 128, 0.1), 0 2px 12px rgba(202, 240, 248, 0.3);
+}
+
+.face::before {
+  height: 12em;
+  width: 12em;
+  top: -2em;
+  left: -2em;
+  z-index: -2;
+  background: linear-gradient(to bottom, #080808, #262626);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.bubble {
+  height: 1.4em;
+  width: 1.4em;
+  transform-origin: top left;
+  top: 5.25em;
+  left: 5.25em;
+  background: #141414;
+  background: radial-gradient(circle at 5% top, rgba(64, 64, 64, 0.5), black);
+  box-shadow: inset 0 2px 4px black, 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+#centerFace{
+    transform-origin: center center;
+    width: 100%;
+    height: 100%;
+    transform: rotate(40deg)
+}
+
+#button {
+  background-color: #404040;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  
+}
+
+#buttonArea{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
